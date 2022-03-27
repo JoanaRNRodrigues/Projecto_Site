@@ -6,7 +6,7 @@
     }
 </script>
 
-<template>          <!-- Melhorar aspetor -->
+<template>          <!-- Ocorre quando no url é inserido uma pagina que não exite -->
   <div class="error">
     <br>
     <br>
