@@ -16,11 +16,11 @@
 
 
 <template>
-    <div class="gridrow">
-        <div class="gridcolumn">
-            <label :for="id">{{name}}: </label>
+    <div class="input-gridrow input-section">
+        <div class="input-gridcolumn">
+            <label class="input-label" :for="id">{{name}}: </label>
         </div>
-        <div class="gridcolumn stretchy-flex">
+        <div class="input-gridcolumn stretchy-flex">
             <input :type="type" :id="id" :name="name" :value="value" @input="updateValue"/>
         </div>
     </div>
@@ -28,7 +28,23 @@
 
 
 <style>
+    .input-gridrow {
+        width:100%;
+        display: flex;
+        padding: 10px 0;
+    }
+    .input-gridcolumn {
+        min-width:25%;
+    }
     .stretchy-flex {
         flex: 1;
+    }
+    .input-section {
+
+    }
+    .input-label {
+        font-weight: bold;
+        padding: 5px 10px;
+        float:right;
     }
 </style>

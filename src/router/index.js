@@ -8,15 +8,14 @@ const routes = [
     component: HomeView   //EAGERLY LOADED
   },
   {
-    path: '/error',
-    name: 'error',
-    component: () => import(/* webpackChunkName: "error" */ '../views/ErrorView.vue'),   //LAZY LOADED
-    props: true
-  },
-  {
     path: '/bugsentry',
     name: 'bugsentry',
     component: () => import(/* webpackChunkName: "signup" */ '../views/BugsEntryView.vue')   //LAZY LOADED
+  },
+  {
+    path: '/bugslist',
+    name: 'bugslist',
+    component: () => import(/* webpackChunkName: "signup" */ '../views/BugsListView.vue')   //LAZY LOADED
   },
   {
     path: '/signup',
@@ -27,6 +26,24 @@ const routes = [
     path: '/signin',
     name: 'signin',
     component: () => import(/* webpackChunkName: "signup" */ '../views/SignInView.vue')   //LAZY LOADED
+  },
+
+  //Talvez mudar o About para Polinator Gardens
+  {
+    path: '/about',
+    name: 'about',
+    component: () => import(/* webpackChunkName: "signup" */ '../views/AboutView.vue')   //LAZY LOADED
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import(/* webpackChunkName: "signup" */ '../views/ContactView.vue')   //LAZY LOADED
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'error',
+    component: () => import(/* webpackChunkName: "error" */ '../views/ErrorView.vue'),   //LAZY LOADED
+    props: true
   },
 ]
 

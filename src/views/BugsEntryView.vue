@@ -1,3 +1,6 @@
+
+<!--Pagina de Administrado só aparece após fazer o Sign In -->
+
 <script setup>
     import InputComponent from './components/InputComponent';
 </script>
@@ -52,36 +55,57 @@ export default {
   }
 }
 </script>
-
+                            <!-- Melhorar aspeto e mudar nomes -->
 <template>
-    <section>
-        <h1>Bugs Registry Data Entry </h1>
-    </section>
-    <section style="display:flex" class="card">
+  <section>
+      <h1><center>Plants Registry</center></h1>
+  </section>
+  <section style="display:flex" class="data-entry-card">
     <div style="width:50%">
         <InputComponent name="Scientific Name" id="latinName" type="text" v-model:value="latinName" />
         <InputComponent name="Name" id="name" type="text" v-model:value="name" />
-        <InputComponent name="Taste" id="taste" type="range" v-model:value="taste" />
+        <InputComponent name="Rarity" id="taste" type="range" v-model:value="taste" />
     </div>
     <div style="width:50%">
-        <InputComponent name="Does it fly?" id="flight" type="checkbox" v-model:value="flight" />
-        <InputComponent name="Does it swim?" id="swim" type="checkbox" v-model:value="swim" />
+        <InputComponent name="Endangered" id="flight" type="checkbox" v-model:value="flight" />
+        <InputComponent name="Poisonous" id="swim" type="checkbox" v-model:value="swim" />
     </div>
-    </section>
-    <button class="styled-button" @click="addBug">Register bug</button>
-    <h2 v-if="error">{{error}}</h2>
-    <section v-if="bugs && bugs.length" style="display:flex; flex-wrap: wrap;">
-        <div class="mini-card" v-for="(bug, index) in bugs" :key="bug.name">
-            <p><b>Scientific Name: </b>{{ bug.latinName }}</p>
-            <p><b>Name: </b>{{ bug.name }}</p>
-            <button class="styled-button" @click="removeBug(index)">Remove Bug</button>
-        </div>
-    </section>
+  </section>
+  <br>
+  <center><button class="data-submit-button" @click="addBug">Register Specimen</button></center>
+  <h2 v-if="error">{{error}}</h2>
+  <section v-if="bugs && bugs.length" style="display:flex; flex-wrap: wrap;">
+      <div class="mini-card" v-for="(bug, index) in bugs" :key="bug.name">
+          <p><b>Scientific Name: </b>{{ bug.latinName }}</p>
+          <p><b>Name: </b>{{ bug.name }}</p>
+          <button class="data-removal-button" @click="removeBug(index)">Remove Registry</button>
+      </div>
+  </section>
 </template>
 
 <style>
-    .card {
-        box-shadow: 0px 0px 5px 0px grey;
-        margin: 0px 10vw;
-    }
+  .data-entry-card {
+    box-shadow: 0px 0px 5px 0px grey;
+    margin: 0px 10vw;
+    padding: 10px;
+  }
+
+  .data-submit-button {
+        cursor: pointer;
+        border: none;
+        background: #0CF;
+        color: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+        font-size: 15px;
+  }
+
+  .data-removal-button {
+        cursor: pointer;
+        border: none;
+        background: #e45e88;
+        color: #FFF;
+        padding: 5px;
+        font-size: 15px;
+  }
 </style>

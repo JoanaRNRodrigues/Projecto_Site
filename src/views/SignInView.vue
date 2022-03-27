@@ -1,3 +1,6 @@
+
+<!--Após Sign In é necessário fazer refresh à pagina -->
+
 <script setup>
     import InputComponent from './components/InputComponent';
 </script>
@@ -43,11 +46,14 @@ export default {
 <template>
     <form action="action_page.php" style="border:1px solid #ccc">
         <section>
-            <h1>Sign In</h1>
+            <br>
+            <br>
+            <h1><center>Sign In</center></h1>
         </section>
         <section class="sign-in-card">
             <InputComponent name="Email" id="email" type="email" v-model:value="email" />
-            <InputComponent name="Password" id="password" type="password" v-model:value="password" />
+            <InputComponent name="
+            Password" id="password" type="password" v-model:value="password" />
             <h2 v-if="error">{{error}}</h2>
             <div class="checkbox">
                     <label>
@@ -66,7 +72,7 @@ export default {
 </template>
 
 
-<style>
+<style scoped>
     /*
     .sign-in-card {
         box-shadow: 0px 0px 5px 0px grey;

@@ -6,9 +6,17 @@
     }
 </script>
 
-<template>
+<template>          <!-- Melhorar aspetor -->
   <div class="error">
-    <h1>An error has occured!</h1>
-    <h2>{{ error }}</h2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1><center>404</center></h1>
+    <h2><center>Page not found!</center></h2>
+    <br>
+    <br>
+    <br>
+    <br>
   </div>
 </template>

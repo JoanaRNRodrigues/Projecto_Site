@@ -1,3 +1,6 @@
+
+<!--Após Sign Up é necessário fazer refresh à pagina -->
+
 <script setup>
     import InputComponent from './components/InputComponent';
 </script>
@@ -43,8 +46,10 @@
 <template>
     <form action="action_page.php" style="border:1px solid #ccc">
         <section>
-            <h1>Sign Up</h1>
-            <p>Please fill in this form to create an account.</p>
+            <br>
+            <br>
+            <h1><center>Sign Up</center></h1>
+            <p><center>Please fill in this form to create an account.</center></p>
         </section>
         <section class="sign-up-card">
             <InputComponent name="Email" id="email" type="email" v-model:value="email" />
@@ -63,23 +68,13 @@
         </section>
         <div>
             <button type="button" class="cancelbtn" @click="cancel">Cancel</button>
-            <button type="button" class="signupbtn" @click="signUp">Sign Up</button>        <!--deixou de fazer signUp-->
-            <!--<button class="styled-button" @click="signUp">Sign Up</button>-->
+            <button type="button" class="signupbtn" @click="signUp">Sign Up</button>        
         </div>
     </form>
 </template>
 
 
-<style>
-    /*
-    .sign-up-card {
-        min-width:500px;
-        width:50vw;
-        box-shadow: 0px 0px 5px 0px grey;
-        margin: 0px 10vw;
-    }
-    */
-
+<style scoped>
     .sign-up-card {
         margin-left: 400px;
     }
