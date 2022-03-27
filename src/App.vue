@@ -31,7 +31,7 @@
 </script>
 
 
-<template>            <!-- Meter novo Header/Navegation Bar -->
+<template>            
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">Pollinator Garden</router-link> |    
@@ -117,48 +117,6 @@ header {
 	letter-spacing: 5px;
 	margin-top: 50px;
 }
- /* 
-  .page {
-    padding: 20px;
-    height: calc(100vh - 180px);
-    position: relative;
-  }
-
-  .gridrow {
-    width:100%;
-    display: flex;
-    padding: 10px 0;
-
-  }
-
-  label {
-    font-weight: bold;
-    padding: 5px 10px;
-    float:right;
-  }
-
-  input {
-    float: left;
-  }
-
-  .gridcolumn {
-    min-width:25%;
-  }
-
-  body {
-    margin: 0px;
-  }
-
-
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    min-height: 100vh;
-  }
-*/
   nav {
     padding: 30px;
     box-shadow: 0px 0px 5px 0px grey;
@@ -173,29 +131,13 @@ header {
     color: rgb(235, 124, 166);
   }
 
-/*
-  .styled-button {
-      min-width: 100px;
-      min-height: 40px;
-      border-radius: 20px;
-      background-color: white;
-      font-weight: bold;
-      margin:20px;
-  }
-  .styled-button:hover {
-      box-shadow: 0px 0px 5px 0px grey;
-  }
-  .styled-button:focus {
-      background-color: 	#DCDCDC;
-  }
-  */
 
   /* Footer Section */
   footer {
     min-height: 120px;
     padding: 40px 0 40px 0;
     background: #e55d87;
-    background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);       /* Mudo a cor algures aqui */
+    background: -moz-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);       
     background: -webkit-linear-gradient(-45deg, #e55d87 0%, #5fc3e4 100%);
     background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e55d87', endColorstr='#5fc3e4', GradientType=1 );
